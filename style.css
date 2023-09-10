@@ -1,0 +1,170 @@
+/* There was this property called object-fit, I'll figure out what it does later. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem; /* 1rem = 16px (default) */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.delivery-section {
+    margin-top: 4.875rem; /* 78px */
+}
+
+.delivery-section p {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.delivery-section p:nth-child(1){
+    font-size: 2.1875rem; /* 35px */
+    font-weight: 200;
+    letter-spacing: 0.7px; /* I'm not sure if the designers did really add letter spacing or if it's a matter of rendering in Figma */
+    color: hsl(234, 12%, 34%);
+}
+
+.delivery-section p:nth-child(2){
+    font-size: 2.1875rem; /* 35px */
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: hsl(234, 12%, 34%);
+}
+
+.delivery-section p:nth-child(3){
+    font-size: 0.9375rem; /* 15px */
+    font-weight: 400;
+    letter-spacing: 0.075px;
+    margin-top: 1.125rem; /* 16px */
+    color: hsl(229, 6%, 66%);
+    max-width: 505px;
+    width: 100%;
+}
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem; /* 30px */
+    margin-top: 4.0625rem; /* 65px */
+    margin-bottom: 4.0625rem; /* 65px */
+    max-width: 69.375rem; /* 1110 px */
+    max-height: 33.125rem; /* 530 px */
+}
+
+.features-section .card {
+    padding: 1.9375rem; /* 31px */
+    border-top: 4px solid;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 14px 10px rgba(163, 165, 174, 0.15); /* I couldn't get the exact value because I don't have the figma file... */
+}
+
+.features-section .card h2{
+    font-family: Poppins, sans-serif;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+.features-section .card p {
+    font-family: Poppins, sans-serif;
+    font-size: 0.8125rem; /* 13px */
+    font-weight: 400;
+    /* letter-spacing: 0.065px; */ /* I'm not sure if I should add this or not */
+    color: hsl(229, 6%, 66%);
+
+    margin-top: 0.5625rem; 
+    max-width: 18rem; /* 288px */
+    /* might replace the rems with ems after testing. I decided not to. */
+}
+
+.features-section .card .image-container {
+    margin-top: 2.5625rem; /* 41px */
+    text-align: right;
+}
+
+.features-section .card:nth-child(1){
+    border-color: hsl(180, 62%, 55%);
+}
+
+.features-section .cards-col-layout .card:nth-child(1){
+    border-color: hsl(0, 78%, 62%);
+}
+
+.features-section .cards-col-layout .card:nth-child(2){
+    border-color:  hsl(34, 97%, 64%);
+}
+
+.features-section .calculator{
+    border-color: hsl(212, 86%, 64%);
+}
+
+.cards-col-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+@media (max-width: 1023px) { /* mobile */
+    .delivery-section {
+        margin-top: 5.25rem; /* 84px */
+    }
+
+    .delivery-section p:nth-child(1) {
+        font-size: 1.5rem; /* 24px */
+        letter-spacing: 0.12px;
+    }
+
+    .delivery-section p:nth-child(2) {
+        font-size: 1.5rem; /* 24px */
+        letter-spacing: 0.12px;
+    }
+
+    .delivery-section p:nth-child(3) {
+        margin-top: 1rem; /* 16px */
+        max-width: 18.5rem; /* 296px */
+        width: 100%;
+    }
+
+    .features-section {
+        flex-direction: column;
+        gap: 1.5625rem; /* 25px */
+        margin-top: 4.75rem; /* 76px */
+        margin-bottom: 4.75rem;
+        max-width: max-content;
+        max-height: max-content;
+    }
+
+    .features-section .card {
+        padding: 1.75rem; /* 28px */
+
+    }
+
+    .features-section .card p {
+        margin-top: 0.25rem; /* 4px */
+        max-width: 15.9375rem; /* 255px */
+    }
+
+    .features-section .card .image-container {
+        margin-top: 2.125rem; /* 34px */
+    }
+
+    .features-section .card .image-container img {
+        height: 3.5rem; /* 56px */
+        width: 3.5rem;
+    }
+
+
+
+}
